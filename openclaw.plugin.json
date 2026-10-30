@@ -1,0 +1,42 @@
+{
+  "id": "past",
+  "name": "past.dev",
+  "description": "past.dev: source-traced memory. Recall before each turn; conversations kept, cut into sittings.",
+  "kind": "memory",
+  "categories": ["memory"],
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "tools": ["past_recall"]
+  },
+  "uiHints": {
+    "apiKey": {
+      "label": "past.dev project key",
+      "placeholder": "past_sk_...",
+      "sensitive": true
+    },
+    "identity": {
+      "label": "Who you are in past.dev",
+      "placeholder": "you@example.com"
+    },
+    "apiUrl": {
+      "label": "past.dev API address",
+      "placeholder": "https://api.past.dev"
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": { "type": "string" },
+      "identity": { "type": "string" },
+      "apiUrl": { "type": "string" },
+      "audience": { "type": "string" },
+      "recall": { "type": "boolean" },
+      "ingest": { "type": "boolean" },
+      "ownerOnly": { "type": "boolean" },
+      "sittingMinutes": { "type": "number", "minimum": 5 }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@pastdotdev/openclaw",
+  "version": "0.1.0",
+  "description": "past.dev memory for OpenClaw: recall before each turn, conversations kept in past.dev.",
+  "homepage": "https://past.dev",
+  "license": "MIT",
+  "type": "module",
+  "files": ["index.js", "openclaw.plugin.json", "README.md", "LICENSE"],
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "typescript": "5.9.3"
+  },
+  "openclaw": {
+    "extensions": ["./index.js"],
+    "compat": {
+      "pluginApi": ">=2026.10.8"
+    },
+    "install": {
+      "minHostVersion": ">=2026.10.8"
+    }
+  }
+}
